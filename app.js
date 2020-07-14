@@ -1,3 +1,4 @@
+var PORT = process.env.PORT || 3000;
 var express  = require('express');
 var bodyParser = require('body-parser');
 
@@ -13,5 +14,6 @@ app.use(express.static('./public'));
 
 weathercontroller(app);
 
-app.listen(3000);
-console.log('Listening to port 3000');
+app.listen(PORT , function(){
+    console.log('Listening to port 3000');
+});
